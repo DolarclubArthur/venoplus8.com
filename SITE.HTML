@@ -1,0 +1,76 @@
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { CheckCircle, Flame, ShieldCheck } from "lucide-react";
+import { motion } from "framer-motion";
+
+export default function AquaSculptLandingPage() {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <main className="bg-gradient-to-b from-blue-50 to-white min-h-screen p-4 md:p-10">
+      <section className="text-center max-w-4xl mx-auto">
+        <motion.h1
+          className="text-4xl md:text-6xl font-bold text-blue-900 mb-4"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          Burn Fat While You Sleep
+        </motion.h1>
+        <p className="text-xl md:text-2xl text-gray-700 mb-6">
+          Discover the natural formula that helps thousands of Americans shed stubborn fat — fast.
+        </p>
+        <Button size="lg" className="bg-blue-700 text-white hover:bg-blue-800">
+          Get AquaSculpt Now
+        </Button>
+      </section>
+
+      <section className="grid md:grid-cols-3 gap-6 my-12 max-w-6xl mx-auto">
+        <Card className="shadow-xl">
+          <CardContent className="p-6">
+            <Flame className="text-red-500 w-10 h-10 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Accelerates Fat Burn</h3>
+            <p className="text-gray-600">
+              AquaSculpt boosts your metabolism naturally, helping your body melt fat even at rest.
+            </p>
+          </CardContent>
+        </Card>
+        <Card className="shadow-xl">
+          <CardContent className="p-6">
+            <CheckCircle className="text-green-500 w-10 h-10 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">100% Natural Ingredients</h3>
+            <p className="text-gray-600">
+              A clean formula made with safe, effective plant-based nutrients.
+            </p>
+          </CardContent>
+        </Card>
+        <Card className="shadow-xl">
+          <CardContent className="p-6">
+            <ShieldCheck className="text-blue-500 w-10 h-10 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Money-Back Guarantee</h3>
+            <p className="text-gray-600">
+              Try it risk-free for 60 days. Love it or get your money back.
+            </p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="bg-blue-100 p-6 rounded-xl max-w-5xl mx-auto text-center">
+        <h2 className="text-3xl font-bold text-blue-800 mb-4">Join Thousands Who Transformed Their Bodies</h2>
+        <p className="text-gray-700 text-lg mb-6">
+          AquaSculpt isn’t just another supplement — it’s a lifestyle shift backed by science and trusted by real people.
+        </p>
+        <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white">
+          Claim Your Discount Now
+        </Button>
+      </section>
+
+      <footer className="text-center text-sm text-gray-500 mt-10">
+        <p>&copy; {currentYear} AquaSculpt™. All rights reserved.</p>
+        <p>These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+      </footer>
+    </main>
+  );
+}
